@@ -5,13 +5,12 @@ import auth from '@/utils/auth' // auth base on sessionStorage
 
 NProgress.configure({ showSpinner: false })// NProgress Configuration
 
-const allowlist = ['/loading', '/noAccess', '/err', '/404', '/401']
+const allowlist = ['/loading', '/noAccess', '/err', '/404', '/401','/demo']
 
 /**
  * 路由导航守卫
  */
 router.beforeEach((to, from, next) => {
-  return next()
   console.log('[router.beforeEach] ', to.path, from.path)
   NProgress.start() // start progress bar
   const currentUser = auth.get('currentUser')

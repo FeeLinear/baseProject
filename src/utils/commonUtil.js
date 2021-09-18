@@ -138,7 +138,7 @@ const CommonUtil = {
   fwLogout: () => { // 主框架注销登录，跳转登录页
     const winParent = window.parent
     const _msg = {
-      source: 'invoiceServer',
+      source: 'baseProject',
       command: 'JPC.cmd.logout'
     }
     const _origin = '*'

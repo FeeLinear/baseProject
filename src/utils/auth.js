@@ -1,6 +1,6 @@
 // 基于 sessionStorage 实现全局缓存
 
-const prefix = 'invoiceServer-'
+const prefix = 'baseProject-'
 
 export default {
   get: (key) => {

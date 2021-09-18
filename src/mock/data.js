@@ -37,8 +37,32 @@ export default [{
         respCode: "001",
         respMsg: "",
         respData: {
-          token: "mock",
-          accountNo: "111"
+          pageIndex: 1,
+          pageSize: 10,
+          totalCount: 30,
+          pageTotal: 3,
+          data: [{
+              invoiceCode: "发票代码",
+              invoiceNumber: "发票号码",
+              invoiceAmount: "发票金额",
+              companyName: "销方企业名称",
+              buyerName: "购买方名称",
+              openInvoiceDate: "开票日期",
+              telephone: "手机号",
+              email: "邮箱",
+              orderNumber: "支付订单号",
+              projectName: "项目名称",
+              carNumber: "车场名称",
+              carNumber: "车牌号码",
+              receivableAmount: "应收金额",
+              actualAmount: "实收金额",
+              discountAmount: "优惠金额",
+              inTime: "入场时间",
+              payTime: "支付时间",
+              invoicingChannel: "开票渠道",
+              paymentChannel: "支付渠道",
+            }
+          ]
         }
       }
     }

@@ -3,7 +3,7 @@
 // see http://vuejs-templates.github.io/webpack for documentation.
 
 const path = require('path')
-const projectName = 'invoiceServer' // 项目名称
+const projectName = 'baseProject' // 项目名称
 
 module.exports = {
   dev: {
@@ -12,13 +12,13 @@ module.exports = {
     assetsSubDirectory: 'static',
     assetsPublicPath: '/' + projectName + '/',
     proxyTable: {
-      '/invoiceServer': {
+      '/baseProject': {
         // target: 'http://218.17.23.118:8082', // dev
         target: 'http://10.10.205.52:8822', // 248 es. for dev
         secure: false,  // https接口配置
         changeOrigin: true, // 是否跨域，true -跨域； false -不跨域
         pathRewrite: {
-          '^/invoiceServer': '/invoiceServer' // 重写接口地址，正式开发环境
+          '^/baseProject': '/baseProject' // 重写接口地址，正式开发环境
         }
       },
       '/jportal': {

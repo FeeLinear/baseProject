@@ -132,30 +132,15 @@ export default {
     },
     getList() {
       this.listLoading = true;
-      //http://t.jslife.net/jportal/queryWxJSData
-      // this.$dataService({
-      //   url: "/order/openQuery",
-      //   method: "post",
-      //   params: this.query,
-      // })
-      //   .then((data) => {
-      //     this.listLoading = false;
-      //     console.log(this.query, data);
-      //   })
-      //   .catch(() => {
-      //     console.log(111)
-      //     this.list = [];
-      //     this.listLoading = false;
-      //   });
       this.$dataService({
-        url: "/jportal/queryWxJSData",
+        url: "/order/openQuery",
         method: "post",
-        params: {},
-        baseURL: ""
+        params: this.query,
       })
-        .then((data) => {
+        .then((re) => {
           this.listLoading = false;
-          console.log(this.query, data);
+          console.log(this.query, re.respData);
+          this.list = re.respData.data
         })
         .catch(() => {
           console.log(111)

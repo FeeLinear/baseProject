@@ -56,69 +56,15 @@ export const constantRouterMap = [{
     path: '/',
     component: Layout,
     hidden: true,
-    redirect: '/loading',
+    redirect: '/demo',
     children: null
   },
   {
-    path: '/invoiceManage/invoicedOrder',
-    component: () => import('@/views/invoiceManage/invoicedOrder/index'),
-    name: 'invoicedOrder',
+    path: '/demo',
+    component: () => import('@/views/demo/index'),
+    name: 'demo',
     meta: {
       title: '已开发票订单'
-    },
-    hidden: true,
-  },
-  {
-    path: '/invoiceManage/invoicingFailureList',
-    component: () => import('@/views/invoiceManage/invoicingFailureList/index'),
-    name: 'invoicingFailureList',
-    meta: {
-      title: '开票失败清单'
-    },
-    hidden: true,
-  },
-  {
-    path: '/invoiceManage/reinvoiceApproval',
-    component: () => import('@/views/invoiceManage/reinvoiceApproval/index'),
-    name: 'reinvoiceApproval',
-    meta: {
-      title: '重开发票审核'
-    },
-    hidden: true,
-  },
-  {
-    path: '/invoiceManage/uninvoicedOrder',
-    component: () => import('@/views/invoiceManage/uninvoicedOrder/index'),
-    name: 'uninvoicedOrder',
-    meta: {
-      title: '未开发票订单'
-    },
-    hidden: true,
-  },
-  {
-    path: '/invoiceManage/varianceInvoicing',
-    component: () => import('@/views/invoiceManage/varianceInvoicing/index'),
-    name: 'varianceInvoicing',
-    meta: {
-      title: '差额开票'
-    },
-    hidden: true,
-  },
-  {
-    path: '/systemService/orgManage',
-    component: () => import('@/views/systemService/orgManage/index'),
-    name: 'orgManage',
-    meta: {
-      title: '组织管理'
-    },
-    hidden: true,
-  },
-  {
-    path: '/systemService/invoiceList',
-    component: () => import('@/views/systemService/invoiceList/index'),
-    name: 'invoiceList',
-    meta: {
-      title: '电子开票列表'
     },
     hidden: true,
   },

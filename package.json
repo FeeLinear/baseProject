@@ -1,13 +1,12 @@
 {
-  "name": "invoiceServer",
+  "name": "baseProject",
   "version": "1.0.0",
   "license": "MIT",
-  "description": "invoiceServer",
+  "description": "baseProject",
   "private": true,
   "author": "",
   "scripts": {
-    "dev": "cross-env BABEL_ENV=development webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
-    "mock": "cross-env MOCK=true webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "cnpm i && npm run dev",
     "build": "node build/build.js",
     "build:report": "npm_config_report=true node build/build.js",
