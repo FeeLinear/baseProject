@@ -1,0 +1,17 @@
+{
+  "/invoiceServer": {
+    "success": true,
+    "respCode": "",
+    "respMsg": "",
+    "respData": {}
+  },
+  "/invoiceServer/web/v1/eval-report/page": {
+    "success": true,
+    "respCode": "001",
+    "respMsg": "",
+    "respData": {
+      "token": "mock",
+      "accountNo": "111"
+    }
+  }
+}

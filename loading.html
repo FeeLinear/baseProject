@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>跳转中...</title>
+</head>
+
+<body>
+
+  <div id="jump">跳转中...</div>
+  <script>
+    const _href = window.location.href;
+    const queryObj = {};
+    let _key = "";
+    let _val = "";
+    if (
+      typeof _href === "string" &&
+      _href.length > 0 &&
+      _href.indexOf("?") >= 0
+    ) {
+      const _hrefP2 = _href.split("?")[1]; // jstoken=42342&h5url=wewrewr
+      const paramsList = _hrefP2.split("&"); // ['jstoken=42342', 'h5url=wewrewr']
+      if (paramsList instanceof Array && paramsList.length > 0) {
+        paramsList.map(items => {
+          if (
+            typeof items === "string" &&
+            items.length > 0 &&
+            items.indexOf("=") >= 0
+          ) {
+            _key = items.split("=")[0];
+            _val = items.split("=")[1];
+            if (typeof _key === "string" && _key.length > 0) {
+              queryObj[_key] = decodeURIComponent(_val);
+            }
+          }
+        });
+      }
+    }
+
+    console.log(queryObj, "queryObj");
+
+    document.querySelector("#jump").addEventListener("click", () => {
+      window.location.href = "./index.html"
+    })
+  </script>
+</body>
+
+</html>
